@@ -15,7 +15,7 @@ int main(int argc, char* argv[]){
         fp = fopen(fileName, "wb");
         for(i = 0; i < 20; i++){
             val = rand()%9999;
-            fwrite(&val, sizeof(int), sizeof(int), fp);
+            fwrite(&val, sizeof(int), 1, fp);
         }
     }
 
@@ -24,7 +24,7 @@ int main(int argc, char* argv[]){
         fp = fopen(fileName, "wb");
         for(i = 0; i < numVals; i++){
             val = rand()%9999;
-            fwrite(&val, sizeof(int), sizeof(int), fp);
+            fwrite(&val, sizeof(int), 1, fp);
         }
     }
 
